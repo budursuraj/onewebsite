@@ -39,6 +39,8 @@ class cartadd(models.Model):
     iname=models.CharField(max_length=20)
     iprice=models.IntegerField()
     image=models.ImageField(upload_to="images/")
+    pquantity=models.CharField(max_length=2,default=1)
+    ptotalprice=models.CharField(max_length=10,default=50)
 
 
     def __str__(self):

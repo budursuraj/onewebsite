@@ -29,7 +29,14 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 
-
+  @media(max-width:500px){
+  h6{
+    font-size:12px;
+  }
+  h4{
+    font-size:12px;
+  }
+}
 </style>
 </head>
 <body>
@@ -107,9 +114,101 @@ input[type=number]::-webkit-outer-spin-button {
 
               </div>
 
+
+
+
 <!-- ya par cart complete -->
 
+
 <div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2 col-2">
+    <center><h6><b>IMAGE</b></h6></center>
+
+    </div>
+    <div class="col-md-2 col-2">
+      <center><h6><b>PRODUCT NAME</b></h6></center>
+  
+      </div>
+      <div class="col-md-2 col-2">
+        <center><h6><b>PRICE</b></h6></center>
+    
+        </div>
+        <div class="col-md-2 col-2">
+          <center><h6><b>QUANTITY</b></h6></center>
+      
+          </div>
+          <div class="col-md-2 col-2">
+            <center><h6><b>SUBTOTAL</b></h6></center>
+        
+            </div>
+            <div class="col-md-2 col-2">
+              <center><h6><b>CANCEL</b></h6></center>
+          
+              </div>
+
+  </div>
+
+</div>
+{% for i in shop %}
+<div class="container-fluid mt-3">
+  <div class="row">
+    <div class="col-md-2 col-2  ">
+      <img src="/media/{{i.image}}" alt="" class="img-fluid ">
+    </div>
+
+    <div class="col-md-2 col-2">
+      <center><h4><b>{{i.iname}}</b></h4></center>
+      
+    </div>
+
+    <div class="col-md-2 col-2">
+      <center><h4><b>${{i.iprice }}</b></h4></center>
+      
+    </div>
+
+    <div class="col-md-2 col-2 d-flex justify-content-center p-0">
+      <form action="uptodate">
+
+        <input type="text" name="pid" value="{{i.id}}" hidden>
+        <input type="text" name="qty" value="{{i.pquantity}}" style="width: 30%;" hidden>
+        <input type="submit" value="-" style="height:35px;width: 20px;" >
+
+      </form>
+
+
+      <form action="update" class="ms-1">
+        <input type="text" name="pid" value="{{i.id}}" hidden>
+
+        <input type="text" name="qty" value="{{i.pquantity}}" style="width: 20px;">
+        <input type="submit" value="+" style="height: 35px;width: 20px;">
+
+
+      </form>
+      </div>  
+
+    <div class="col-md-2 col-2">
+      <center><h4><b>${{i.ptotalprice }}</b></h4></center>
+
+      
+    </div>
+
+    <div class="col-md-2 col-2">
+      <form action="delete">
+        <input type="text" name="value" value="{{i.id}}" hidden>
+        <center><input type="submit" value="X" class="mt-5" style="height: 35px;width: 40px;border-radius: 100px;border:none"></center>
+      </form>
+    
+    </div>
+
+  </div>
+
+</div>
+  {% endfor %}
+
+
+
+<!-- <div class="container-fluid">
   <div class="row">
   <div class="col-md-2 col-2">
     <center><h6><b>Image</b></h6></center>
@@ -117,8 +216,8 @@ input[type=number]::-webkit-outer-spin-button {
   </div>
 
 
-  <div class="col-md-3 col-3">
-    <center><h6><b>PRODUCT</b></h6></center>
+  <div class="col-md-2 col-2">
+    <center>  <h6><b>PRODUCT</b></h6></center>
 
   </div>
 
@@ -127,9 +226,15 @@ input[type=number]::-webkit-outer-spin-button {
 
   </div>
 
-  <div class="col-md-3 col-3">
+  <div class="col-md-2 col-2">
     <center> <h6><b>	QUANTITY</b></h6></center>
 
+
+  </div>
+  
+
+  <div class="col-md-2 col-2">
+    <center><h6><b>		SUBTOTAL</b></h6></center>
 
   </div>
 
@@ -149,11 +254,11 @@ input[type=number]::-webkit-outer-spin-button {
 <div class="container-fluid m-3">
   <div class="row">
     <div class="col-md-2 col-2  ">
-      <img src="/media/{{i.image}}" alt=""style="height:100%;width: 100%;">
+      <img src="/media/{{i.image}}" alt="" class="img-fluid">
 
 
     </div>
-    <div class="col-md-3 col-3 ">
+    <div class="col-md-2 col-2 ">
       <center><h4><b>{{i.iname}}</b></h4></center>
 
     </div>
@@ -161,12 +266,11 @@ input[type=number]::-webkit-outer-spin-button {
       <center><h4><b>${{i.iprice }}</b></h4></center>
     </div>
   
-  <div class="col-md-3  col-3">
-    <!-- <div id="root"></div>  -->
-    <div>
-      <center><button>-</button>
-      <input type="number" class="col-md-2 col-3">
-    <button>+</button></center>
+  <div class="col-md-2  col-2 d-flex justify-content-center align-items-center">
+        
+      <button>-</button>
+      <input type="number" class="col-md-1 col-3">
+    <button>+</button>
 
   </div>
 
@@ -179,7 +283,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 </div>
 </div>
-{% endfor %}
+{% endfor %} -->
 
 
               

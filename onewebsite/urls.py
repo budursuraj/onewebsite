@@ -34,6 +34,16 @@ urlpatterns = [
       path('cart',views.eight),
       path('check',views.pro),
       path('addcart',views.addcart),
+      path('delete',views.delete),
+      path('forgot',views.ten),
+      path('update',views.update),
+      path('uptodate',views.uptodata),
+      path('forgot',views.forgotpw),
+      path('password',views.forgot),
+
+
+
+
 
      
 

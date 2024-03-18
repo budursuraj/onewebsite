@@ -1,0 +1,263 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bhol gaya password</title>
+    <link rel="stylesheet" href="{% static 'website.css' %}">
+
+    <!-- Latest compiled and minified CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+     .bgrbl1{
+    
+    background-color: #222222;
+  }
+
+  .bt04{
+        height: 50px;
+        
+        background-color: #f73434;
+        color: white;
+        border-radius: 50px;
+        border: none;
+
+    }
+    .bt04:hover{
+        height: 50px;
+       
+        background-color: #f7343477;
+        color: white;
+        border-radius: 50px;
+        border: none;
+
+    }
+</style>
+
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="col-md-12 bgcr">
+        <div class="row">
+    
+            <div class="col-md-4 "></div>
+            <div class="col-md-4 "></div>
+            <div class="col-md-4  text-light" >FREE DELIVERY OVER $100 ON ALL PRODUCTS</div>
+        </div>
+    </div>
+    </div>
+    <!-- Free DELIVERY complete -->
+    
+    
+    
+    <div class="col-md-12 bg-white" style="position:sticky;top: 0px;">
+
+      <nav class="navbar navbar-expand-sm  navbar-light">
+          <div class="container-fluid">
+            <a class="navbar-brandv ms-md-5" href="#"><img src="../static/img/01.png" alt="" height="34px" width="136px"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                  <a class="nav-link ms-md-5 ms-5 corr" href="index"><b>HOMEPAGE</b></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link ms-md-3 ms-3 corr" href="shop"><b>SHOP</b></a>
+                </li>
+               
+                <li class="nav-item">
+                  <a class="nav-link ms-md-3 ms-3 corr" href="BLOG"><b>BLOG</b></a>
+                </li>    
+                <li class="nav-item">
+                  <a class="nav-link ms-md-3 ms-3 corr" href="from"><b>CONTACT</b></a>
+                </li>    
+                <li class="nav-item">
+                  <a class="nav-link ms-md-4 ms-4 corr" href="ac"><b>MY ACCOUNT</b></a>
+                </li> 
+                <li class="nav-item">
+                  <a class="nav-link ms-md-5 ms-2 corr1 me-md-5 me-5 " href="cart"><i class="fa fa-shopping-bag corr1 " aria-hidden="true" style="height: 15px;width: 40px;"></i>
+                  </a>
+                </li> 
+              </ul>
+            </div>
+          </div>
+        </nav>
+  
+  </div>
+    
+    
+    
+          <!-- navbar is complete  -->
+
+
+          <div class="container ">
+            <div class="row">
+        
+        
+                <div class="col-md-3 col-3  "></div>
+        
+        
+        
+                <div class="col-md-6 col-6 ">
+                    <center><h1 class="mt-md-5 mt-5"><b>forgot password</b></h1></center>
+                </div>
+                
+        
+        
+                <div class="col-md-3 col-3  "></div>
+        
+                
+        
+            </div>
+            
+        
+        </div>
+            <!-- ya par login complete -->
+        
+        
+        
+            <div class="container ">
+                <div class="row">
+            
+            
+                    <div class="col-md-3 col-3 "></div>
+            
+            
+            
+                    <div class="col-md-6 col-11   ms-md-0 ms-3 border" >
+                        <div class="col-md-12  mt-md-3 mt-3 ">
+                          <form action="password" method="post">
+                            {% csrf_token %}
+                            <br><br>
+                           <h6 class="ms-md-5 ms-5">Username or email address *</h6>
+                          <center><input type="text" name="en" class="col-md-10 col-10 h005">
+                            <br><br></center>
+        
+        
+                            <h6 class="ms-md-5 ms-5">password</h6>
+                            <center><input type="password" name="ep" class="col-md-10 col-10 h005">
+                            <br><br></center>
+
+
+                            <h6 class="ms-md-5 ms-5"> confim password</h6>
+                            <center><input type="password" name="cp" class="col-md-10 col-10 h005">
+                            <br><br></center>
+        
+                            <input type="checkbox" class="ms-md-5 ms-5"><span> Remember me</span>
+                            <br><br>
+        
+                        <center><button class="col-md-8  col-8 bt04 ">Log In</button>
+                          </center>
+                          <br>
+        
+                          <a href="#"  class="text-decoration-none text-black" ><center><h6>Lost your password?</h6></center></a>
+                          <a href="register"  class="text-decoration-none text-black" ><center><h6>sign up</h6></center></a>
+                        </div>
+                      </form>
+                        
+                    </div>
+            
+            
+                    <div class="col-md-12 h01"></div>
+            
+                    
+            
+                </div>
+                
+            
+            </div>
+        
+        
+        
+            <!-- ya par login complete -->
+        
+        
+            <div class="container-fluid bgrbl1 " >
+                <div class="container">
+                <div class="row">
+              
+              
+                  <div class="col-md-3">
+                    <h6 class="text-light mt-md-5 mt-5">CONTACT INFO</h6>
+                    <br>
+                    <h6 class="text-light ms-md-5">London Eye, London, United Kingdom</h6>
+                    <br>
+              
+                    <h6 class="text-light ms-md-5">621-254-2147</h6>
+                    <br>
+                    <h6 class=" ms-md-5 corw1">contact@support.com</h6>
+              
+                  </div>
+              
+              
+                  <div class="col-md-3 ">
+                    <h6 class=" mt-md-5 mt-5 text-light">INFORMATION</h6>
+                    <br>
+                    <h6 class=" corw1">About Us</h6>
+                    <h6 class=" corw1">Store Location
+                    </h6>
+              
+                    <h6 class=" corw1">Contact Us</h6>
+              
+                    <h6 class=" corw1">Shipping & Delivery</h6>
+                    <h6 class=" corw1">Latest News</h6>
+              
+              
+                  </div>
+                  
+              
+              
+              
+                  <div class="col-md-3 ">
+                    <h6 class=" mt-md-5 mt-5 text-light">OUR SERVICE</h6>
+                    <br>
+                    <h6 class=" corw1">About Us</h6>
+                    <h6 class=" corw1">Store Location
+                    </h6>
+              
+                    <h6 class="corw1">Contact Us</h6>
+              
+                    <h6 class=" corw1">Shipping & Delivery</h6>
+                    <h6 class=" corw1">Latest News</h6>
+              
+              
+                  </div>
+              
+              
+                  
+                  <div class="col-md-3 ">
+                    <h6 class="text-light mt-md-5 mt-5">NEWSLETTER</h6>
+                    <br>
+                    <div  >
+                      <input type="email" placeholder="Enter your Email Address" class="ms-md-2 ms-3 mt-md-3 mt-2" style="outline: none;">
+              
+                      <button class="bt02">GO</button>
+                      <br><br>
+                    </div>
+              
+                      <input type="checkbox"><span class="text-light">GDPR Checkbox Label</span>
+                      <br><br>
+              
+                    
+              
+                  </div>
+              
+              
+              
+              
+                </div>
+              </div>
+              </div>
+    
+</body>
+</html>
